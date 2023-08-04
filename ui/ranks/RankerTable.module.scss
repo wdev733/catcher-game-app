@@ -1,0 +1,27 @@
+.container {
+  @apply w-full max-w-2xl min-h-[400px] bg-black;
+
+  .row {
+    @apply flex w-full;
+  }
+
+  .rank {
+    @apply w-20;
+  }
+
+  .username {
+    @apply flex-1;
+  }
+
+  .score {
+    @apply w-28;
+  }
+
+  .header {
+    @apply border-b-2 p-4 font-bold text-xl;
+  }
+
+  .content {
+    @apply flex flex-col gap-4 p-4 text-lg;
+  }
+}

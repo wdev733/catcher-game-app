@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.pageButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.pageButton {
+  width: 100px;
+  height: 30px;
+}
+
+.descriptions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.pageSizeSelector {
+  width: 80px;
+  height: 30px;
+}

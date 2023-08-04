@@ -1,0 +1,42 @@
+.container {
+  border-radius: 20px;
+  height: 40px;
+  padding: 0px 18px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.primary {
+    background: #e51937;
+    color: #fff;
+  }
+
+  &.secondary {
+    background: #fff;
+    color: #e51937;
+  }
+
+  &.text {
+    color: #fff;
+    background: transparent;
+  }
+
+  &.outline {
+    border: 1px solid #e51937;
+    background: transparent;
+    color: #e51937;
+  }
+  &:disabled {
+    background: #565656;
+    cursor: not-allowed;
+  }
+}

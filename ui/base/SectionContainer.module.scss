@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  padding: 3rem 2rem;
+
+  &.w-max-full {
+    max-width: 100%;
+  }
+}

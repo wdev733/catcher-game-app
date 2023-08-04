@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --max-container-width: 1440px;
+  }
+
+  body {
+    @apply bg-black text-white overflow-x-hidden m-0 p-0 font-poppins leading-[1.1];
+  }
+
+  body * {
+    @apply box-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @apply p-0 m-0;
+  }
+
+  a {
+    @apply no-underline;
+  }
+}

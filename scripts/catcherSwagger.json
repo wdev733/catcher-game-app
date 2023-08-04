@@ -1,0 +1,99 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/users/register-score": {
+      "post": {
+        "operationId": "UserController_registerScore",
+        "summary": "create a new user with score",
+        "description": "Creates a user with score",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateUserDto" } } }
+        },
+        "responses": {
+          "200": { "description": "", "content": { "application/json": { "schema": { "type": "string" } } } },
+          "400": {
+            "description": "Error creating user in db, check the createUserDto for more details.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/BadRequestResponseDto" } } }
+          }
+        },
+        "tags": ["Users"]
+      }
+    },
+    "/users": {
+      "get": {
+        "operationId": "UserController_findAll",
+        "summary": "Get all users",
+        "description": "Get all users",
+        "parameters": [
+          {
+            "name": "offset",
+            "required": false,
+            "in": "query",
+            "description": "The number of rows to skip before beginning to return rows in the response. Use this parameter to paginate large result sets.",
+            "example": 0,
+            "schema": { "type": "number" }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "The maximum number of rows to return in the response. Defualt is 20",
+            "example": 100,
+            "schema": { "type": "number" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": { "type": "array", "items": { "$ref": "#/components/schemas/GetUserResponseDto" } }
+              }
+            }
+          }
+        },
+        "tags": ["Users"]
+      }
+    }
+  },
+  "info": { "title": "CATCHER GAME SERVICE", "description": "Api for catcher game ", "version": "1.0", "contact": {} },
+  "tags": [],
+  "servers": [{ "url": "http://localhost:4201" }],
+  "components": {
+    "schemas": {
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "userName": { "type": "string", "description": "User name", "example": "user1" },
+          "score": { "type": "number", "description": "Score", "example": 200 }
+        },
+        "required": ["userName", "score"]
+      },
+      "BadRequestResponseDto": {
+        "type": "object",
+        "properties": {
+          "statusCode": { "type": "number", "description": "The status code of the error.", "example": 400 },
+          "message": {
+            "description": "The error message",
+            "example": "Invalid data",
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "error": { "type": "string", "description": "The error type.", "example": "Bad Request" }
+        },
+        "required": ["statusCode", "message", "error"]
+      },
+      "GetUserResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "User Id", "example": "3067cd0a-ccd5-4729-8a42-350e62545ec5" },
+          "userName": { "type": "string", "description": "User name", "example": "user1" },
+          "score": { "type": "number", "description": "Score", "example": 200 }
+        },
+        "required": ["id", "userName", "score"]
+      }
+    }
+  }
+}

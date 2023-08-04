@@ -1,0 +1,7 @@
+.container {
+  @apply bg-game min-h-screen flex flex-col gap-6 items-center;
+
+  .title {
+    @apply text-3xl font-bold;
+  }
+}

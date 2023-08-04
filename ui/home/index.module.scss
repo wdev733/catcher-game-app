@@ -1,0 +1,7 @@
+.container {
+  @apply w-screen h-screen bg-home flex flex-col justify-center items-center gap-4;
+}
+
+.menuButton {
+  @apply w-64 h-12;
+}
