@@ -1,4 +1,4 @@
-import RankContainer from 'ui/ranks';
+import RankContainer from 'containers/ranks';
 
 const RankPage = () => {
   return <RankContainer />;

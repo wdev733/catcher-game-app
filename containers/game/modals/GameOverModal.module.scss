@@ -1,0 +1,19 @@
+.container {
+  @apply bg-black border-2 p-6 max-w-full w-[400px];
+
+  .title {
+    @apply text-3xl font-bold text-center;
+  }
+
+  .subTitle {
+    @apply text-2xl font-bold text-center mt-2;
+  }
+
+  .formWrapper {
+    @apply mt-4;
+  }
+
+  .buttonWrapper {
+    @apply mt-6 flex flex-col gap-2;
+  }
+}

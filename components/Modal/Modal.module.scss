@@ -1,0 +1,7 @@
+.container {
+  @apply w-screen h-screen max-w-full fixed left-0 top-0 flex justify-center items-center z-50 md:p-4;
+}
+
+.content {
+  @apply px-[73px] py-[64px] bg-white md:px-8 md:py-8;
+}

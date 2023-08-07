@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import style from 'components/TextInput/TextInput.module.scss';
 
+import type { TextInputType } from 'components/TextInput';
+
 interface TextInputProps {
-  type?: 'text' | 'password';
+  type?: TextInputType;
   value: string;
   placeholder?: string;
   disabled?: boolean;

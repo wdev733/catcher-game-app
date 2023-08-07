@@ -1,7 +1,7 @@
 import { act } from 'react-dom/test-utils';
 
 import { screen, render } from 'test.utils';
-import RankContainer from 'ui/ranks';
+import RankContainer from 'containers/ranks';
 
 describe('Top 100 Rankers View', () => {
   test('Should render title', async () => {

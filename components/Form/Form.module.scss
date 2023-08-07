@@ -1,0 +1,59 @@
+.container {
+  @apply w-full flex flex-col gap-1;
+
+  .inputWrapper {
+    @apply flex items-center gap-2;
+  }
+
+  .title {
+    @apply font-normal text-lg md:text-sm;
+  }
+
+  .input {
+    @apply bg-black;
+  }
+
+  .primary {
+    .title {
+      @apply text-white;
+
+      .required {
+        @apply text-[#82bb08];
+      }
+    }
+
+    .input {
+      @apply bg-black;
+    }
+  }
+
+  .dark {
+    .title {
+      color: #fff;
+
+      .required {
+        color: #fff;
+      }
+    }
+
+    .input {
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+    }
+  }
+
+  .inputWrapper {
+    &.stacked {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .error {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #d83f4d;
+  }
+}

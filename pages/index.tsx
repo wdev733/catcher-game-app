@@ -1,4 +1,4 @@
-import Home from 'ui/home';
+import Home from 'containers/home';
 
 export default function HomePage() {
   return <Home />;

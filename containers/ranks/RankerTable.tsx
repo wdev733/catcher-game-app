@@ -1,4 +1,4 @@
-import style from 'ui/ranks/RankerTable.module.scss';
+import style from 'containers/ranks/RankerTable.module.scss';
 
 import type { User } from 'services/catcher/useGetTop100Rankers';
 

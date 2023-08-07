@@ -1,4 +1,4 @@
-import { GamePlay } from 'ui/game';
+import { GamePlay } from 'containers/game';
 
 const GamePage = () => {
   return <GamePlay />;

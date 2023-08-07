@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import { gameConfig } from 'shared/configs/game';
-import style from 'ui/game/components/Boat.module.scss';
+import style from 'containers/game/components/Boat.module.scss';
 
 import type { Position } from 'shared/configs/game';
 

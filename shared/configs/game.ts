@@ -84,3 +84,9 @@ export const assetPacks: AssetPack[] = [
     score: -100,
   },
 ];
+
+export enum GameStatus {
+  Playing = 'Playing',
+  Ended = 'Ended',
+  Paused = 'Paused',
+}

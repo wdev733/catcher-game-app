@@ -1,0 +1,5 @@
+.container {
+  background: rgba(44, 44, 44, 0.4);
+  backdrop-filter: blur(4px);
+  @apply w-screen h-screen max-w-full fixed left-0 top-0 z-40;
+}

@@ -4,19 +4,19 @@ import { gameConfig } from 'shared/configs/game';
 import useAsset from 'shared/hooks/useAsset';
 import useInterval from 'shared/hooks/useInterval';
 import useMoveBoat from 'shared/hooks/useMoveBoat';
-import Boat from 'ui/game/components/Boat';
-import style from 'ui/game/play/Playground.module.scss';
+import Boat from 'containers/game/components/Boat';
+import style from 'containers/game/play/Playground.module.scss';
 
 import Asset from '../components/Asset';
 
-import type { AssetPack } from 'shared/configs/game';
+import { AssetPack, GameStatus } from 'shared/configs/game';
 
 interface PlaygroundProps {
-  isPlaying: boolean;
+  gameStatus: GameStatus;
   onUpdateScore: (score: number) => void;
 }
 
-const Playground = ({ isPlaying, onUpdateScore }: PlaygroundProps) => {
+const Playground = ({ gameStatus, onUpdateScore }: PlaygroundProps) => {
   const { position: boatPosition, handleKeyDown } = useMoveBoat({});
   const { generateRandomAssetPack } = useAsset();
 
@@ -27,7 +27,7 @@ const Playground = ({ isPlaying, onUpdateScore }: PlaygroundProps) => {
       const asset = generateRandomAssetPack();
       setAssets([...assets, asset]);
     },
-    isPlaying ? gameConfig.playground.assetGenerateFrequency : null,
+    gameStatus === GameStatus.Playing ? gameConfig.playground.assetGenerateFrequency : null,
   );
 
   useEffect(() => {
@@ -37,6 +37,12 @@ const Playground = ({ isPlaying, onUpdateScore }: PlaygroundProps) => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   });
+
+  useEffect(() => {
+    if (gameStatus === GameStatus.Ended) {
+      setAssets([]);
+    }
+  }, [gameStatus]);
 
   const handleDestroyAsset = (id, getAcquired) => {
     const findIndex = assets.findIndex((asset) => asset.id === id);
@@ -60,7 +66,7 @@ const Playground = ({ isPlaying, onUpdateScore }: PlaygroundProps) => {
           assetType={asset}
           boatPosition={boatPosition}
           onDestroy={handleDestroyAsset}
-          isPlaying={isPlaying}
+          isPlaying={gameStatus === GameStatus.Playing}
         />
       ))}
       <Boat position={boatPosition} />

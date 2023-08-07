@@ -1,4 +1,4 @@
-import style from 'ui/game/play/Status.module.scss';
+import style from 'containers/game/play/Status.module.scss';
 
 interface StatusProps {
   time: number;

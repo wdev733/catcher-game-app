@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react';
 
 import classNames from 'classnames';
-import style from 'ui/base/SectionContainer.module.scss';
+import style from 'containers/base/SectionContainer.module.scss';
 
 interface SectionContainerProps {
   fullWidth?: boolean;
