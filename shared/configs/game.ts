@@ -25,7 +25,7 @@ export interface GameConfig {
 }
 
 export const gameConfig: GameConfig = {
-  gameDuration: 20,
+  gameDuration: 60,
   playground: {
     width: 320,
     height: 640,
@@ -88,5 +88,4 @@ export const assetPacks: AssetPack[] = [
 export enum GameStatus {
   Playing = 'Playing',
   Ended = 'Ended',
-  Paused = 'Paused',
 }
