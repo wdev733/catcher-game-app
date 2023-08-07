@@ -1,7 +1,7 @@
+import MainContainer from 'containers/main/Main';
 import { HydrationProvider, Client } from 'react-hydration-provider';
 import { Provider } from 'react-redux';
 import { store } from 'stores';
-import MainContainer from 'containers/main/Main';
 
 import type { AppProps } from 'next/app';
 

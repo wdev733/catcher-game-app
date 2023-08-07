@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 
-import { gameConfig } from 'shared/configs/game';
+import Boat from 'containers/game/components/Boat';
+import style from 'containers/game/play/Playground.module.scss';
+import { gameConfig, GameStatus } from 'shared/configs/game';
 import useAsset from 'shared/hooks/useAsset';
 import useInterval from 'shared/hooks/useInterval';
 import useMoveBoat from 'shared/hooks/useMoveBoat';
-import Boat from 'containers/game/components/Boat';
-import style from 'containers/game/play/Playground.module.scss';
 
 import Asset from '../components/Asset';
 
-import { AssetPack, GameStatus } from 'shared/configs/game';
+import type { AssetPack } from 'shared/configs/game';
 
 interface PlaygroundProps {
   gameStatus: GameStatus;

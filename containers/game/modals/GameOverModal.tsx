@@ -1,12 +1,13 @@
+import { useEffect } from 'react';
+
 import { Button } from 'components/Button';
+import { FormInput } from 'components/Form';
 import { Modal } from 'components/Modal';
 import style from 'containers/game/modals/GameOverModal.module.scss';
-
-import type { ModalProps } from 'components/Modal';
 import { useFormik } from 'formik';
 import { userPostScoreSchema } from 'shared/configs/schemas';
-import { useEffect } from 'react';
-import { FormInput } from 'components/Form';
+
+import type { ModalProps } from 'components/Modal';
 
 export interface FormValue {
   userName?: string;

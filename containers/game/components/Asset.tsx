@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
+import style from 'containers/game/components/Asset.module.scss';
 import { gameConfig } from 'shared/configs/game';
 import useInterval from 'shared/hooks/useInterval';
 import numberTool from 'shared/tools/number';
-import style from 'containers/game/components/Asset.module.scss';
 
 import type { AssetPack, Position } from 'shared/configs/game';
 

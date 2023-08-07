@@ -4,4 +4,8 @@
   .title {
     @apply text-3xl font-bold;
   }
+
+  .buttonWrapper {
+    @apply flex justify-between max-w-2xl w-full;
+  }
 }

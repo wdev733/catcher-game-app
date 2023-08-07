@@ -1,7 +1,7 @@
 import { Button } from 'components/Button';
+import style from 'containers/home/index.module.scss';
 import { useRouter } from 'next/router';
 import { StaticLink } from 'shared/configs/links';
-import style from 'containers/home/index.module.scss';
 
 const Home = () => {
   const router = useRouter();

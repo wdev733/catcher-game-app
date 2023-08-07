@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react';
 
-import Head from 'next/head';
 import style from 'containers/main/Main.module.scss';
+import Head from 'next/head';
 
 const MainContainer = ({ children }: PropsWithChildren) => (
   <>

@@ -1,19 +1,20 @@
 import { useState } from 'react';
 
-import { Modal } from 'components/Modal';
-import { GameStatus, gameConfig } from 'shared/configs/game';
-import useInterval from 'shared/hooks/useInterval';
 import GameOverModal from 'containers/game/modals/GameOverModal';
 import style from 'containers/game/play/index.module.scss';
 import Playground from 'containers/game/play/Playground';
 import Status from 'containers/game/play/Status';
-import useSingleForm from 'shared/hooks/useSingleForm';
-import usePostScore from 'services/catcher/usePostScore';
-import { CreateUserDto } from 'services/catcher/api';
-import { FormikValues } from 'formik';
-import SubmitScoreSuccessModal from '../modals/SubmitScoreSuccessModal';
 import { useRouter } from 'next/router';
+import usePostScore from 'services/catcher/usePostScore';
+import { GameStatus, gameConfig } from 'shared/configs/game';
 import { StaticLink } from 'shared/configs/links';
+import useInterval from 'shared/hooks/useInterval';
+import useSingleForm from 'shared/hooks/useSingleForm';
+
+import SubmitScoreSuccessModal from '../modals/SubmitScoreSuccessModal';
+
+import type { FormikValues } from 'formik';
+import type { CreateUserDto } from 'services/catcher/api';
 
 export const GamePlay = () => {
   const router = useRouter();

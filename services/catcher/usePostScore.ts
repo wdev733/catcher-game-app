@@ -1,4 +1,6 @@
-import { CreateUserDto, useUserControllerRegisterScoreMutation } from './api';
+import { useUserControllerRegisterScoreMutation } from './api';
+
+import type { CreateUserDto } from './api';
 
 const usePostScore = () => {
   const [registerScore, { isLoading, data, error }] = useUserControllerRegisterScoreMutation();
